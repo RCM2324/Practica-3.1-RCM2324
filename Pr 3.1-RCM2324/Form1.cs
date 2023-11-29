@@ -6,8 +6,8 @@ namespace Pr_3._1_RCM2324
         {
             InitializeComponent();
         }
-            //? Copio el codigo del ejercicio 2.3 y pruebo si compila 
-            
+        //? Copio el codigo del ejercicio 2.3 y pruebo si compila 
+
         private void btn1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
@@ -18,8 +18,10 @@ namespace Pr_3._1_RCM2324
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
 
-            // telegrama urgente?
-            if (cbUrgente.Checked)
+            //? Que tipo de telegrama es? RCM2324
+            if (radioBtn1.Checked)
+                tipoTelegrama = 'o';
+            if (radioBtn2.Checked)
                 tipoTelegrama = 'u';
 
             //Obtengo el número de palabras que forma el telegrama 

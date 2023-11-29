@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             btn1 = new Button();
-            cbUrgente = new CheckBox();
             etq1 = new Label();
             txtTelegrama = new TextBox();
             txtPrecio = new TextBox();
             etq2 = new Label();
+            radioBtn1 = new RadioButton();
+            radioBtn2 = new RadioButton();
             SuspendLayout();
             // 
             // btn1
@@ -47,18 +48,6 @@
             btn1.Text = "Calcular";
             btn1.UseVisualStyleBackColor = false;
             btn1.Click += btn1_Click;
-            // 
-            // cbUrgente
-            // 
-            cbUrgente.AutoSize = true;
-            cbUrgente.BackColor = Color.DarkGray;
-            cbUrgente.Font = new Font("Perpetua", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            cbUrgente.Location = new Point(49, 148);
-            cbUrgente.Name = "cbUrgente";
-            cbUrgente.Size = new Size(91, 22);
-            cbUrgente.TabIndex = 1;
-            cbUrgente.Text = "Urgente?";
-            cbUrgente.UseVisualStyleBackColor = false;
             // 
             // etq1
             // 
@@ -101,17 +90,42 @@
             etq2.TabIndex = 5;
             etq2.Text = "Coste:";
             // 
+            // radioBtn1
+            // 
+            radioBtn1.AutoSize = true;
+            radioBtn1.Font = new Font("Perpetua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            radioBtn1.Location = new Point(12, 170);
+            radioBtn1.Name = "radioBtn1";
+            radioBtn1.Size = new Size(95, 22);
+            radioBtn1.TabIndex = 6;
+            radioBtn1.TabStop = true;
+            radioBtn1.Text = "Ordinario";
+            radioBtn1.UseVisualStyleBackColor = true;
+            // 
+            // radioBtn2
+            // 
+            radioBtn2.AutoSize = true;
+            radioBtn2.Font = new Font("Perpetua", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            radioBtn2.Location = new Point(112, 170);
+            radioBtn2.Name = "radioBtn2";
+            radioBtn2.Size = new Size(84, 22);
+            radioBtn2.TabIndex = 7;
+            radioBtn2.TabStop = true;
+            radioBtn2.Text = "Urgente";
+            radioBtn2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkGray;
             ClientSize = new Size(410, 273);
+            Controls.Add(radioBtn2);
+            Controls.Add(radioBtn1);
             Controls.Add(etq2);
             Controls.Add(txtPrecio);
             Controls.Add(txtTelegrama);
             Controls.Add(etq1);
-            Controls.Add(cbUrgente);
             Controls.Add(btn1);
             Name = "Form1";
             Text = "Pr 3.1-RCM2324";
@@ -122,10 +136,11 @@
         #endregion
 
         private Button btn1;
-        private CheckBox cbUrgente;
         private Label etq1;
         private TextBox txtTelegrama;
         private TextBox txtPrecio;
         private Label etq2;
+        private RadioButton radioBtn1;
+        private RadioButton radioBtn2;
     }
 }
