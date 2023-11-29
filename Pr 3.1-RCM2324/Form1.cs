@@ -42,7 +42,7 @@ namespace Pr_3._1_RCM2324
                     coste = 5 + 0.75 * (numPalabras - 10);
 
             txtPrecio.Text = coste.ToString() + " euros";
-        }
+        }//ya esta el codigo modificado RCM2324otHer
 
     }
 }
