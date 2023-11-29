@@ -32,7 +32,7 @@ namespace Pr_3._1_RCM2324
                 if (numPalabras <= 10)
                     coste = 2.5;
                 else
-            ?        coste = 2.5 + 0.5 * (numPalabras - 10);
+                    coste = 2.5 + 0.5 * (numPalabras - 10);
 
             txtPrecio.Text=coste.ToString() + "euros";
 
