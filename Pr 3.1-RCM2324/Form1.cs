@@ -12,8 +12,8 @@ namespace Pr_3._1_RCM2324
         {
             string textoTelegrama;
             char tipoTelegrama = ' ';
-            int numPalabras = 0;
-            double coste;
+            int numPalabras;
+            double coste = 0;
 
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
@@ -25,15 +25,16 @@ namespace Pr_3._1_RCM2324
                 tipoTelegrama = 'u';
 
             //Obtengo el número de palabras que forma el telegrama 
-            numPalabras = textoTelegrama.Length;
+            numPalabras = textoTelegrama.Split(' ' , '.' , ',' , ':' , ';').Length;
 
             //Si el telegrama es ordinario
-            if (tipoTelegrama == 'o')
+            if (tipoTelegrama == ' ')
                 if (numPalabras <= 10)
-                    coste = 25;
+                    coste = 2.5;
                 else
-                    coste = 0.5 * numPalabras;
-            else
+            ?        coste = 2.5 + 0.5 * (numPalabras - 10);
+
+            txtPrecio.Text=coste.ToString() + "euros";
 
             //Si el telegrama es urgente
             if (tipoTelegrama == 'u')
@@ -41,10 +42,9 @@ namespace Pr_3._1_RCM2324
                     coste = 5;
                 else
                     coste = 5 + 0.75 * (numPalabras - 10);
-            else
-                coste = 0;
+
             txtPrecio.Text = coste.ToString() + " euros";
-        }
+        }//ya esta el codigo modificado RCM2324otHer
 
     }
 }
